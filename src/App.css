@@ -1,0 +1,345 @@
+@import url(https://unpkg.com/@webpixels/css@1.0/dist/index.css);
+
+
+#optionPanel{
+  font-weight: 700;
+  text-align: center !important;
+  background-color: #f3f4f6 !important;
+  height: 40px;
+  border-radius: 3px;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------------------------------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.most-outer {
+  /* background-color: rgb(224, 224, 224) !important; */
+  height: auto !important;
+}
+
+#dum {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.signup-form {
+  width: 480px;
+  padding: 32px;
+  border-radius: 8px;
+  border-top: 0.2vh solid rgb(226, 226, 226);
+  background-color: #ffffff;
+  /* box-shadow: 5px 5px 8px #6b728040; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  text-align: center;
+  /* box-shadow: 5px 30px 78px 0 rgba(0, 0, 0, 0.1), 0 15px 21px 0 rgba(0, 0, 0, 0.4); */
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px 0px, rgba(0, 0, 0, 0.09) 0px 4px 2px 0px, rgba(0, 0, 0, 0.09) 0px 8px 4px 0px, rgba(0, 0, 0, 0.09) 0px 16px 8px 0px, rgba(0, 0, 0, 0.09) 0px 32px 16px 0px;
+}
+
+.header {
+  margin-bottom: 48px;
+}
+#validotp{
+  width: 40%;
+}
+#validotp::placeholder{
+  color: #868686;
+}
+
+.header h1 {
+  font-weight: bolder;
+  font-size: 28px;
+  color: #6366f1;
+}
+
+.input {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.input input {
+  width: 100%;
+  padding: 8px 40px;
+  border-radius: 4px;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-size: 16px;
+}
+
+.input input::placeholder {
+  color: #828383;
+}
+
+.input i {
+  top: 50%;
+  width: 36px;
+  position: absolute;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.signup-btn {
+  width: 100%;
+  /* border: none; */
+  padding: 8px 0;
+  margin: 24px 0;
+  border-radius: 4px;
+  background-color: #6366f1;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-btn:active {
+  background-color: #4f46e5;
+  transition: all 0.3s ease;
+}
+
+.social-icons i {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  margin: 24px 8px 48px 8px;
+  background-color: gray;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+i.fa-facebook-f {
+  background-color: #3b5998;
+}
+
+i.fa-twitter {
+  background-color: #1da1f2;
+}
+
+i.fa-google {
+  background-color: #dd4b39;
+}
+
+a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+/* 0000000000000000000000000000000000000000000000000000000000000000000000000000 */
+
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
+
+
+#product-landing {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+img {
+  width: 100%;
+}
+
+#logo {
+  width: 193px;
+  height: 47.64px;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+}
+/* 
+#hero > * {
+  flex: none;
+  max-width: calc(900px / 2); was 1440px 
+  width: calc(100% / 2);
+}
+*/
+ #hero-text {
+  font-family: "Jost", sans-serif;
+  color: #54575a;
+}
+
+#hero-text h1 {
+  font-size: 58px;
+  line-height: 68px;
+}
+
+#hero-text p {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.hero-btn {
+  display: inline-block;
+  height: 46.28px;
+  margin-top: 15px;
+}
+
+#apple {
+  max-width: 138.44px;
+  margin-right: 22px;
+}
+
+#google {
+  max-width: 156.19px;
+}
+
+#hero-visual {
+  position: relative;
+}
+
+#hero-img {
+  position: relative;
+  top: 30px;
+}
+
+#main {
+  position: relative;
+  height: 680px;
+}
+
+.main-img {
+  width: calc(100% / 4 + 34px);
+  position: absolute;
+}
+
+.main-img img {
+  filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.25));
+}
+
+.main-img:nth-of-type(1) {
+  left: -34px;
+  bottom: 0;
+}
+
+.main-img:nth-of-type(2) {
+  left: 20%;
+  bottom: 0;
+}
+
+.main-img:nth-of-type(3) {
+  right: 26%;
+  bottom: calc(224px - 50px);
+}
+
+.main-img:nth-of-type(4) {
+  right: 26%;
+  bottom: 0;
+}
+
+.main-img:nth-of-type(5) {
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: 914px) {
+ #hero-text h1 {
+    font-size: 45px;
+  }
+
+  #hero-text p {
+    font-size: 18px;
+  }
+
+  #apple,
+  #google {
+    width: 80% !important;
+  }
+
+  .main-img:nth-of-type(2) {
+    left: 20%;
+  }
+
+  .main-img:nth-of-type(3),
+  .main-img:nth-of-type(4) {
+    right: 26%;
+  }
+}
+@media (max-width: 720px) {
+  #apple,
+  #google {
+    width: 40% !important;
+  }
+
+  #hero-text h1 {
+    font-size: 40px;
+  }
+
+  #hero-text p {
+    font-size: 16px;
+  }
+  
+  #main .main-img {
+    transform: translateX(10%);
+  }
+
+  .main-img:nth-of-type(2) {
+    left: 19%;
+  }
+
+  #main {
+    height: 600px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  #hero-visual {
+    display: none;
+  }
+
+  #hero-intro {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
