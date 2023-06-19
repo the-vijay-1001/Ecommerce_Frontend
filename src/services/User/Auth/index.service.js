@@ -1,11 +1,11 @@
-import { UserAuth } from "../../../apiEndPoint"
+import { UserAuth } from "../../../apiEndPoints"
 import APIrequest from "../../axios";
 export const UserAuthService = {
-    userSignup: async (bodydata) => {
+    userSignup: async (bodyData) => {
         try {
             const payload = {
                 ...UserAuth.userSignup,
-                bodydata
+                bodyData
             };
             const res = await APIrequest(payload);
             return res;
@@ -13,11 +13,11 @@ export const UserAuthService = {
             console.log(error);
         }
     },
-    userLogin: async (bodydata) => {
+    userLogin: async (bodyData) => {
         try {
             const payload = {
                 ...UserAuth.userLogin,
-                bodydata
+                bodyData
             };
             const res = await APIrequest(payload);
             return res;

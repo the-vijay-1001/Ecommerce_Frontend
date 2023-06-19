@@ -1,5 +1,53 @@
 @import url(https://unpkg.com/@webpixels/css@1.0/dist/index.css);
 
+#login-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1530533718754-001d2668365a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+}
+
+.my-form-container {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #252525;
+  font-family: candara;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.my-form-container label {
+  font-size: 18px;
+  letter-spacing: 1px;
+  /* margin-bottom: 5px; */
+}
+
+.my-form-container input{
+  margin-bottom: 20px;
+}
+
+.my-form-container button {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 2px;
+  font-family: calibri;
+}
+
+.err-msg{
+  color: red;
+  position: absolute;
+  margin-top: -20px;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
 
 #optionPanel{
   font-weight: 700;

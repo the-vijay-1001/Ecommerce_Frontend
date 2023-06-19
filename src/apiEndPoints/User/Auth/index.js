@@ -1,7 +1,7 @@
 const UserAuth = {
     userSignup : {
         url : "/signup",
-        method : "post"
+        method : "POST"
     },
     userLogin : {
         url : "/signin  ",

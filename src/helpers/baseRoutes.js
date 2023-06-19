@@ -1,4 +1,5 @@
 export const baseRoutes = {
-  userBaseRoutes: "/",
-  adminBaseRoutes: "/siteadmin",
-};
+  userBaseRoute:"/",
+  adminBaseRoute:"/admin",
+  vendorBaseRoute:"/vendor"
+}

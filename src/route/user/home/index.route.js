@@ -1,5 +1,5 @@
 import {Home} from "../../../pages";
-import routesMap from "../../../routeController/userRouteMap";
+import routesMap from "../../../routeControl/userRouteMap";
 
 export default function route() {
     return [

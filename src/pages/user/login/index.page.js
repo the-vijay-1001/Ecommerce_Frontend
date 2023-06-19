@@ -6,8 +6,8 @@ function UserLogin() {
     const navigate = useNavigate();
     const submit = async (value) => {
         try {
-            let bodydata = { ...value };
-            const res = await UserAuthService.userLogin(bodydata);
+            let bodyData = { ...value };
+            const res = await UserAuthService.userLogin(bodyData);
             if (res) {
                 window.alert("login success")
                 navigate("/");

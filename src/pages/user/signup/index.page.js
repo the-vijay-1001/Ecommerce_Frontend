@@ -8,8 +8,8 @@ function UserSignup() {
     const submit = async(value) => {
         console.log(value);
         try {
-            let bodydata = {...value};
-            const res = await UserAuthService.userSignup(bodydata);
+            let bodyData = {...value};
+            const res = await UserAuthService.userSignup(bodyData);
             if(res){
                 window.alert("signup success")
                 navigate("/login");

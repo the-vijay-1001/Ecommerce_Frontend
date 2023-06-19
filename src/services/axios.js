@@ -1,22 +1,36 @@
 import axios from "axios";
 
+import config from "../config";
+
+
+
+
+
 const APIrequest = async ({
-    bodydata,
     method,
     url,
     baseURL,
     queryParams,
-    token = ""
+    bodyData,
+    formHeaders,
 }) => {
-    const apiToken = token !== "" ? token : "kladjfiou834759jkyzx89c76y789";
+
     try {
+
         const axiosConfig = {
             method: method || "GET",
-            baseURL: "http://localhost:5000",
+            baseURL: config.API_BASE_URL,
             headers: {
                 "content-type": "application/json",
-            }
+                "X-Frame-Options": "sameorigin",
+                hostname:config.APP_URL
+            },
         };
+
+        if (formHeaders) {
+            axiosConfig.headers = { ...axiosConfig.headers, ...formHeaders };
+        }
+
         if (baseURL) {
             axiosConfig.baseURL = baseURL;
         }
@@ -25,11 +39,35 @@ const APIrequest = async ({
             axiosConfig.url = url;
         }
 
-        if (bodydata) {
+
+
+
+        if (queryParams) {
+
+            const queryParamsPayload = {};
+
+            for (const key in queryParams) {
+                if (Object.hasOwnProperty.call(queryParams, key)) {
+                    let element = queryParams[key];
+                    if (typeof element === "string") {
+                        element = element.trim();
+                    }
+                    if (!["", null, undefined, NaN].includes(element)) {
+                        queryParamsPayload[key] = element;
+                    }
+                }
+            }
+            axiosConfig.params = queryParamsPayload;
+        }
+
+
+
+
+        if (bodyData) {
             const bodyPayload = {};
-            for (const key in bodydata) {
-                if (Object.hasOwnProperty.call(bodydata, key)) {
-                    let element = bodydata[key];
+            for (const key in bodyData) {
+                if (Object.hasOwnProperty.call(bodyData, key)) {
+                    let element = bodyData[key];
                     if (typeof element === "string") {
                         element = element.trim();
                     }
@@ -41,19 +79,20 @@ const APIrequest = async ({
             axiosConfig.data = bodyPayload;
         }
 
-        if (token) {
-            axiosConfig.headers = {
-                ...axiosConfig.headers,
-                authorization: `Bearer ${apiToken}`,
-            };
-        }
-        console.log(axiosConfig);
-        
+        console.log(axiosConfig)
         const res = await axios(axiosConfig);
-        return res;
+
+        return res.data;
+
     } catch (error) {
+
         console.log(error);
+
     }
-}
+
+};
+
+
+
 
 export default APIrequest;
