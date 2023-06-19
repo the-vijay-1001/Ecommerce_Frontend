@@ -19,10 +19,13 @@ function Navbar() {
 
                     </div>
                     <div class="navbar-nav ms-lg-4">
-                        <Link to="/signup" class="nav-item nav-link">Register</Link>
+                        <Link to="/vendor/signup" class="nav-item nav-link">Register</Link>
                     </div>
                     <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-                        <Link class="btn btn-sm btn-primary" to="/login">Login</Link>
+                        <Link class="btn btn-sm btn-primary" to="/vendor/login">Login</Link>
+                    </div>
+                    <div class="ms-3">
+                        <Link class="btn  btn-sm btn-outline-success" to="/vendor/dash"><i class="fa-solid fa-user"></i></Link>
                     </div>
                 </div>
             </div>

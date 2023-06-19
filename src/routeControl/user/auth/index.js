@@ -2,10 +2,10 @@ import { baseRoutes } from "../../../helpers/baseRoutes";
 
 const accesRoutes = {
     LOGIN: {
-        path: `${baseRoutes.userBaseRoute}login`
+        path: `${baseRoutes.vendorBaseRoute}/login`
     },
     SIGNUP: {
-        path: `${baseRoutes.userBaseRoute}signup`
+        path: `${baseRoutes.vendorBaseRoute}/signup`
     },
     HOME: {
         path: `${baseRoutes.userBaseRoute}`
@@ -15,6 +15,9 @@ const accesRoutes = {
     },
     FORGOT: {
         path: `${baseRoutes.userBaseRoute}forgotpassword`
+    },
+    DASHBOARD: {
+        path : `${baseRoutes.vendorBaseRoute}/dash`
     }
 }
 

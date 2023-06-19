@@ -1,4 +1,4 @@
-import { ForgotPaaword, OtpValidataion, UserLogin, UserSignup } from "../../../pages";
+import { ForgotPaaword, OtpValidataion, UserLogin, UserSignup, UserDash } from "../../../pages";
 import routesMap from "../../../routeControl/userRouteMap";
 
 export default function route() {
@@ -35,5 +35,13 @@ export default function route() {
             private: false,
             element: <ForgotPaaword />,
         },
+        {
+            path: routesMap.DASHBOARD.path,
+            name: "vendor dash",
+            key: routesMap.DASHBOARD.path,
+            commonRoute: false,
+            private: false,
+            element: <UserDash />,
+        }
     ]
 }
