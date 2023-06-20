@@ -6,6 +6,10 @@ const AdminAuth = {
     forgotPassword:{
         url:"/admin/forgot-password",
         method:"POST"
+    },
+    resetPassword:{
+        url:"/admin/reset-password",
+        method:"POST"
     }
 }
 

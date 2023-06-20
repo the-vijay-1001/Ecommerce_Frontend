@@ -1,5 +1,8 @@
 import auth from "./Auth"
-
+import dashboard from "./Dashboard"
+import AdminAccount from "./AdminAccount"
 export default {
-    ...auth
+    ...auth,
+    ...dashboard,
+    ...AdminAccount
 }

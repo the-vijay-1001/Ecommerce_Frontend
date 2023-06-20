@@ -1,11 +1,14 @@
 import { ErrorMessage, Field, Formik, Form } from "formik"
 import validation from "./validations";
+import { ToastContainer } from "react-toastify";
 
 const AdminLoginForm = ({ onSubmit ,children}) => {
 
     return <>
 
         <div id="login-container">
+        <ToastContainer/>
+
             <Formik
                 initialValues={{
                     email: '',

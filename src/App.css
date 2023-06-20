@@ -28,7 +28,7 @@
   /* margin-bottom: 5px; */
 }
 
-.my-form-container input{
+.my-form-container input {
   margin-bottom: 20px;
 }
 
@@ -40,7 +40,7 @@
   font-family: calibri;
 }
 
-.err-msg{
+.err-msg {
   color: red;
   position: absolute;
   margin-top: -20px;
@@ -49,13 +49,14 @@
 }
 
 
-#optionPanel{
+#optionPanel {
   font-weight: 700;
   text-align: center !important;
   background-color: #f3f4f6 !important;
   height: 40px;
   border-radius: 3px;
 }
+
 .App {
   text-align: center;
 }
@@ -125,10 +126,12 @@
 .header {
   margin-bottom: 48px;
 }
-#validotp{
+
+#validotp {
   width: 40%;
 }
-#validotp::placeholder{
+
+#validotp::placeholder {
   color: #868686;
 }
 
@@ -237,6 +240,7 @@ img {
   align-items: center;
   margin-top: 80px;
 }
+
 /* 
 #hero > * {
   flex: none;
@@ -244,7 +248,7 @@ img {
   width: calc(100% / 2);
 }
 */
- #hero-text {
+#hero-text {
   font-family: "Jost", sans-serif;
   color: #54575a;
 }
@@ -324,7 +328,7 @@ img {
 }
 
 @media (max-width: 914px) {
- #hero-text h1 {
+  #hero-text h1 {
     font-size: 45px;
   }
 
@@ -346,7 +350,9 @@ img {
     right: 26%;
   }
 }
+
 @media (max-width: 720px) {
+
   #apple,
   #google {
     width: 40% !important;
@@ -359,7 +365,7 @@ img {
   #hero-text p {
     font-size: 16px;
   }
-  
+
   #main .main-img {
     transform: translateX(10%);
   }
@@ -388,6 +394,308 @@ img {
 
 
 
+.loader-background {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid rgb(103, 103, 255);
+  border-bottom: 10px solid rgb(103, 103, 255);
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------------------------vendor css-------------------tickit0----------------------- */
+
+.card {
+
+  margin-top: 100px;
+
+  border-radius: 5px;
+
+  box-shadow: 5px 10px 19px 5px black;
+
+  width: 150%;
+
+  margin-left: 150px;
+
+}
 
 
 
+
+.m-r-0 {
+
+  margin-right: 0px;
+
+}
+
+
+
+
+.m-l-0 {
+
+  margin-left: 0px;
+
+}
+
+
+
+
+.user-card-full .user-profile {
+
+  border-radius: 5px 0 0 5px;
+
+}
+
+
+
+
+.user-profile {
+
+  padding: 20px 0;
+
+}
+
+
+
+
+.card-block {
+
+  padding: 1.25rem;
+
+}
+
+
+
+
+.m-b-25 {
+
+  margin-bottom: 25px;
+
+}
+
+
+
+
+.img-radius {
+
+  /* border-radius: 5px; */
+
+  width: 80% !important;
+
+  height: 27vh !important;
+
+}
+
+.signout{
+
+  margin-top: 6vh !important;
+
+}
+
+
+
+
+
+.card .card-block p {
+
+  line-height: 25px;
+
+}
+
+
+
+
+.card-block {
+
+  padding: 1.25rem;
+
+}
+
+
+
+
+.b-b-default {
+
+  border-bottom: 1px solid #e0e0e0;
+
+}
+
+
+
+
+.m-b-20 {
+
+  margin-bottom: 20px;
+
+}
+
+
+
+
+.p-b-5 {
+
+  padding-bottom: 5px !important;
+
+}
+
+
+
+
+.card .card-block p {
+
+  line-height: 25px;
+
+}
+
+
+
+
+.m-b-10 {
+
+  margin-bottom: 10px;
+
+}
+
+
+
+
+.text-muted {
+
+  color: #919aa3 !important;
+
+}
+
+
+
+
+.b-b-default {
+
+  border-bottom: 1px solid #e0e0e0;
+
+}
+
+
+
+
+.f-w-600 {
+
+  font-weight: 600;
+
+}
+
+
+
+
+.m-b-20 {
+
+  margin-bottom: 20px;
+
+}
+
+
+
+
+.m-t-40 {
+
+  margin-top: 20px;
+
+}
+
+
+
+
+.p-b-5 {
+
+  padding-bottom: 5px !important;
+
+}
+
+
+
+
+.m-b-10 {
+
+  margin-bottom: 10px;
+
+}
+
+
+
+
+.m-t-40 {
+
+  margin-top: 20px;
+
+}
+
+
+
+
+.user-card-full .social-link li {
+
+  display: inline-block;
+
+}
+
+
+
+
+.user-card-full .social-link li a {
+
+  font-size: 20px;
+
+  margin: 0 10px 0 0;
+
+  -webkit-transition: all 0.3s ease-in-out;
+
+  transition: all 0.3s ease-in-out;
+
+}
+
+.my-input{
+  background-color: transparent;
+  box-shadow: 0px 0px 1px gray;
+  padding-left: 10px;
+  border-radius: 3px;
+}
+
+#user-name{
+  text-align: center;
+}
