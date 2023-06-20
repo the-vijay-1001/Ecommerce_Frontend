@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Formik, Form, Field } from "formik";
-function UserSignupForm({ onSubmit }) {
+function VendorSignupForm({ onSubmit }) {
     return <>
         <Formik
-            initialValues={{ email: '', name: '', contact: '', password: '', role: "",status:"true" }}
+            initialValues={{ email: '', name: '', contact: '', password: ''}}
             enableReinitialize
             onSubmit={onSubmit}
         >
@@ -14,13 +14,6 @@ function UserSignupForm({ onSubmit }) {
                             <div class="header">
                                 <h1>Create an Account</h1>
                                 <p id="dum">Get started for free!</p>
-                            </div>
-                            <div class="input" >
-                               <Field as="select" id="optionPanel" className="text-primary"  name="role">
-                                    <option value="">-- Select Role --</option>
-                                    <option value="user">USER</option>
-                                    <option value="vendor">VENDOR</option>
-                                </Field>
                             </div>
                             <div class="input">
                                 <i class="fa-solid fa-user"></i>
@@ -49,7 +42,7 @@ function UserSignupForm({ onSubmit }) {
                                 <i class="fa-brands fa-twitter"></i>
                                 <i class="fa-brands fa-google"></i>
                             </div>
-                            <p id="dum">Already have an account ?<Link to="/login">signin</Link></p>
+                            <p id="dum">Already have an account ? <Link to="/vendor/login">signin</Link></p>
                         </div>
                     </div>
                 </div>
@@ -58,4 +51,4 @@ function UserSignupForm({ onSubmit }) {
     </>
 }
 
-export default UserSignupForm;
+export default VendorSignupForm;

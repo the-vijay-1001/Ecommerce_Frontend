@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import { Link } from "react-router-dom";
 
-function UserLoginForm({ onSubmit }) {
+function VendorLoginForm({ onSubmit }) {
     return <>
         <Formik
             initialValues={{ email: '', password: '' }}
@@ -33,7 +33,7 @@ function UserLoginForm({ onSubmit }) {
                                 <i class="fa-brands fa-twitter"></i>
                                 <i class="fa-brands fa-google"></i>
                             </div>
-                            <p id="dum">Do not have an Account <Link to="/signup"> signup</Link> </p>
+                            <p id="dum">Do not have an Account ? <Link to="/vendor/signup"> signup</Link> </p>
                         </div>
                     </div>
                 </div>
@@ -44,4 +44,4 @@ function UserLoginForm({ onSubmit }) {
 }
 
 
-export default UserLoginForm;
+export default VendorLoginForm;

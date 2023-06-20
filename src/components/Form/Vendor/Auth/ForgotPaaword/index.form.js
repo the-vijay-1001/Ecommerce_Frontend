@@ -14,7 +14,7 @@ function Forgot() {
                             <i class="fa-solid fa-envelope"></i>
                             <input type="email" placeholder="Email" />
                         </div>
-                        <Link to="/otp"><input class="signup-btn" type="submit" value="SEND OTP" /></Link>
+                         <Link to="/otp"><input class="signup-btn" type="submit" value="SEND OTP" /></Link>
                     </form>
                     <p id="dum">secure way for reseting password</p>
                 </div>

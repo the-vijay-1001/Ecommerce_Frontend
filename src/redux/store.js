@@ -1,12 +1,13 @@
 import { combineReducers } from "redux";
-import { authSlice, userSlice } from ".";
+import { authSlice, userSlice, vendoreSlice } from ".";
 import storage from "redux-persist/lib/storage";
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { createStateSyncMiddleware, initStateWithPrevTab } from "redux-state-sync";
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer, persistStore } from "redux-persist";
 const RootReducer = combineReducers({
     auth: authSlice,
-    user: userSlice
+    user: userSlice,
+    vendor: vendoreSlice
 });
 
 const persistConfig = {

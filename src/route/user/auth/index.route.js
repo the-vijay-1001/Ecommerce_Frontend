@@ -1,47 +1,32 @@
-import { ForgotPaaword, OtpValidataion, UserLogin, UserSignup, UserDash } from "../../../pages";
+import { UserDashboard, UserLogin, UserSignup} from "../../../pages";
 import routesMap from "../../../routeControl/userRouteMap";
-
-export default function route() {
+function route(){
     return [
         {
-            path: routesMap.LOGIN.path,
-            name: "Login",
-            key: routesMap.LOGIN.path,
-            commonRoute: false,
-            private: false,
-            element: <UserLogin />
-        },
-        {
-            path: routesMap.SIGNUP.path,
+            path: routesMap.USER_SIGNUP.path,
             name: "Sign Up",
-            key: routesMap.SIGNUP.path,
+            key: routesMap.USER_SIGNUP.path,
             commonRoute: false,
             private: false,
-            element: <UserSignup />,
-        },
-        {
-            path: routesMap.OTP.path,
-            name: "Otp Valid",
-            key: routesMap.OTP.path,
+            element: <UserSignup/>,
+          },
+          {
+            path: routesMap.USER_LOGIN.path,
+            name: "Login",
+            key: routesMap.USER_LOGIN.path,
             commonRoute: false,
             private: false,
-            element: <OtpValidataion />,
-        },
-        {
-            path: routesMap.FORGOT.path,
-            name: "Otp Valid",
-            key: routesMap.FORGOT.path,
+            element: <UserLogin/>,
+          },
+          {
+            path: routesMap.USER_DASHBOARD.path,
+            name: "Dashboard",
+            key: routesMap.USER_DASHBOARD.path,
             commonRoute: false,
             private: false,
-            element: <ForgotPaaword />,
-        },
-        {
-            path: routesMap.DASHBOARD.path,
-            name: "vendor dash",
-            key: routesMap.DASHBOARD.path,
-            commonRoute: false,
-            private: false,
-            element: <UserDash />,
-        }
-    ]
+            element: <UserDashboard/>,
+          },
+    ]    
 }
+
+export default route;

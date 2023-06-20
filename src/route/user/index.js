@@ -1,10 +1,11 @@
-import { PublicLayout } from "../../layouts"
-import publicRoute from "./public.route"
-export const userRoutes = ()=>{
-    return [
-        {
-            element : <PublicLayout/>,
-            children : [...publicRoute()]
-        }
-    ]
-}
+import { PublicLayout } from "../../layouts";
+import publicRoutes from "./public.route";
+
+export const userRoutes = () => {
+  return [
+    {
+      element: <PublicLayout />,
+      children: [...publicRoutes()]
+    }
+  ];
+};

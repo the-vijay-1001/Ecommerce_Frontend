@@ -1,27 +1,19 @@
-import { Link, useNavigate } from "react-router-dom";
-import { Navbar, SignupForm } from "../../../components";
-import { useTranslation } from "react-i18next";
 import { UserAuthService } from "../../../services/User/Auth/index.service";
+import { useNavigate } from "react-router-dom";
+import { Navbar, SignUpform, SignupForm, UserSignUpform } from "../../../components";
 function UserSignup() {
     const navigate = useNavigate();
-    const { t } = useTranslation();
-    const submit = async(value) => {
-        console.log(value);
-        try {
-            let bodyData = {...value};
-            const res = await UserAuthService.userSignup(bodyData);
-            if(res){
-                window.alert("signup success")
-                navigate("/login");
-            }
-        } catch (error) {
-            console.log(error);
+    
+    const submit = async(values)=>{
+        const res  = await UserAuthService.userSignup(values);
+        if(res){
+            window.alert("SignUp successfull")
+            navigate("/login")
         }
     }
     return <>
-        <Navbar />
-        <SignupForm onSubmit={submit} t={t} />
+        <Navbar/>
+        <UserSignUpform onSubmit={submit}/>
     </>
 }
-
 export default UserSignup;
