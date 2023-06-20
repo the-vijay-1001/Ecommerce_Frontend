@@ -8,12 +8,12 @@ function HomeLand() {
                         <p className="mt-5">Aliquam rhoncus pretium dolor volutpat lectus odio non tellus neque. Aliquet et purus</p>
                     </div>
                     <div id="hero-action-btn">
-                        <div id="apple" class="hero-btn">
+                        <div id="apple" className="hero-btn">
                             <a >
                                 <img src="https://thehelpfultipper.github.io/build_figma_design/imgs/App-Store-Web.png" alt="App Store Web button." />
                             </a>
                         </div>
-                        <div id="google" class="hero-btn"><a >
+                        <div id="google" className="hero-btn"><a >
                             <img src="https://thehelpfultipper.github.io/build_figma_design/imgs/Google-Play-Web.png" alt="Google Play button." />      </a>
 
                         </div>
@@ -26,19 +26,19 @@ function HomeLand() {
                 </div>
             </div>
             <div id="main">
-                <div class="main-img">
+                <div className="main-img">
                     <img src="https://thehelpfultipper.github.io/build_figma_design/imgs/Cart.png" alt="Cart visual." />
                 </div>
-                <div class="main-img">
+                <div className="main-img">
                     <img src="https://thehelpfultipper.github.io/build_figma_design/imgs/Orders.png" alt="Orders visual." />
                 </div>
-                <div class="main-img">
+                <div className="main-img">
                     <img src="https://thehelpfultipper.github.io/build_figma_design/imgs/Profile.png" alt="Profile visual." />
                 </div>
-                <div class="main-img">
+                <div className="main-img">
                     <img src="https://thehelpfultipper.github.io/build_figma_design/imgs/Product.png" alt="Product visual." />
                 </div>
-                <div class="main-img">
+                <div className="main-img">
                     <img src="https://thehelpfultipper.github.io/build_figma_design/imgs/Home.png" alt="Home visual." />
                 </div>
             </div>

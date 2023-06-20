@@ -699,3 +699,12 @@ img {
 #user-name{
   text-align: center;
 }
+
+.avatar-preview {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
