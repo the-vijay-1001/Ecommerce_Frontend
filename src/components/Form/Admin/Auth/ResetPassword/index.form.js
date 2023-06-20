@@ -8,7 +8,8 @@ const AdminForgotPassword = ({ onSubmit, children }) => {
         <div id="login-container">
             <Formik
                 initialValues={{
-                    email: '',
+                    password: '',
+                    cpassword:''
                 }}
                 validationSchema={validation()}
                 onSubmit={onSubmit}
@@ -24,8 +25,8 @@ const AdminForgotPassword = ({ onSubmit, children }) => {
                             <Field type="password" id="password" className="form-control" name="password" placeholder="Ex : Abc@123" />
                             <ErrorMessage name="password" component="div" className="error err-msg" />
                             <label htmlFor="email">Confirm Password:</label>
-                            <Field type="password" id="password" className="form-control" name="password" placeholder="Ex : Abc@123" />
-                            <ErrorMessage name="password" component="div" className="error err-msg" />
+                            <Field type="password" id="cpassword" className="form-control" name="cpassword" placeholder="Ex : Abc@123" />
+                            <ErrorMessage name="cpassword" component="div" className="error err-msg" />
                             <button className="btn btn-primary" type="submit">Submit</button>
                         </div>
                     </div>

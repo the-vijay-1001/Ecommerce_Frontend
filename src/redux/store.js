@@ -4,6 +4,7 @@ import storage from "redux-persist/lib/storage";
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import { createStateSyncMiddleware, initStateWithPrevTab } from "redux-state-sync";
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer, persistStore } from "redux-persist";
+
 const RootReducer = combineReducers({
     auth: authSlice,
     user: userSlice,

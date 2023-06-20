@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 function Navbar() {
     const dataOfVendor = useSelector(state => state.vendor);
     return <>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-0 py-3">
-            <div class="container-xl">
-                <Link class="navbar-brand" to="/">
-                    <img src="https://preview.webpixels.io/web/img/logos/clever-light.svg" class="h-8" alt="..." />
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-0 py-3">
+            <div className="container-xl">
+                <Link className="navbar-brand" to="/">
+                    <img src="https://preview.webpixels.io/web/img/logos/clever-light.svg" className="h-8" alt="..." />
                 </Link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-lg-auto">
