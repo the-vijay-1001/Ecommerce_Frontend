@@ -14,6 +14,10 @@ const UserAuth = {
     userLogin : {
         url : "/signin  ",
         method : "POST"
+    },
+    vendorUpdate : {
+        url : "/vendor/vendor-update",
+        method : "POST"
     }
 
 }

@@ -19,7 +19,7 @@ const APIrequest = async ({
 
         const axiosConfig = {
             method: method || "GET",
-            baseURL: "http://localhost:3030",
+            baseURL: "http://localhost:3001",
             headers: {
                 "content-type": "application/json",
                 "X-Frame-Options": "sameorigin",

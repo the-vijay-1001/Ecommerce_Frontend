@@ -1,4 +1,5 @@
-import { UserAuth } from "../../../apiEndPoints"
+
+import UserAuth from "../../../apiEndPoints/Vendor/Auth";
 import APIrequest from "../../axios";
 export const UserAuthService = {
     vendorSignup: async (bodyData) => {
@@ -20,7 +21,20 @@ export const UserAuthService = {
                 bodyData
             };
             const res = await APIrequest(payload);
-            return res;
+            return res.data;
+        } catch (error) {
+            console.log(error);
+        }
+    },
+    vendorUpdate: async (bodyData) => {
+        try {
+            const payload = {
+                ...UserAuth.vendorUpdate,
+                bodyData
+            };
+            const res = await APIrequest(payload);
+            if (res)
+                return res;
         } catch (error) {
             console.log(error);
         }
@@ -49,5 +63,5 @@ export const UserAuthService = {
             console.log(error);
         }
     }
-    
+
 }
