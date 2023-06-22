@@ -12,30 +12,38 @@ function Navbar() {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-lg-auto">
-                        <Link to="/vendor/signup" class="nav-item nav-link active">Home</Link>
-                        <Link to="/vendor/login" class="nav-item nav-link active">Product</Link>
-                        <Link to="/" class="nav-item nav-link active">Features</Link>
-                        <Link to="/" class="nav-item nav-link active">Pricing</Link>
-
+                <div className="collapse navbar-collapse" id="navbarCollapse">
+                    <div className="navbar-nav mx-lg-auto">
+                        <Link to="/" className="nav-item nav-link active">Home</Link>
+                        <Link to="/product-list" className="nav-item nav-link active">Product</Link>
+                        <Link to="/" className="nav-item nav-link active">Features</Link>
+                        <Link to="/" className="nav-item nav-link active">Pricing</Link>
                     </div>
                     {dataOfVendor && <>
-                        <div class="navbar-nav ms-lg-4">
-                            <Link to="/vendor/signup" class="nav-item nav-link">Register</Link>
+                        <div className="dropdown">
+                            <button className="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"> Register </button>
+                            <div className="dropdown-menu" style={{minWidth: '120px'}}>
+                                <Link className="dropdown-item " to="/signup">User</Link>
+                                <Link className="dropdown-item " to="/vendor/signup">Vendor</Link>
+                            </div>
                         </div>
-                        <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-                            <Link class="btn btn-sm btn-primary" to="/vendor/login">Login</Link>
+                        <div className="dropdown ms-2">
+                            <button className="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"> Login </button>
+                            <div className="dropdown-menu" style={{minWidth: '120px'}}>
+                                <Link className="dropdown-item " to="/login">User</Link>
+                                <Link className="dropdown-item " to="/vendor/login">Vendor</Link>
+                                <Link className="dropdown-item " to="/admin">Admin</Link>
+                            </div>
                         </div>
                     </>}
                     {!dataOfVendor && <>
-                        <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-                            <Link class="btn btn-sm btn-primary" to="/signout">SignOut</Link>
+                        <div className="d-flex align-items-lg-center mt-3 mt-lg-0">
+                            <Link className="btn btn-sm btn-primary" to="/signout">SignOut</Link>
                         </div>
                     </>
                     }
-                    <div class="ms-3">
-                        <Link class="btn  btn-sm btn-outline-success" to="/vendor/dash"><i class="fa-solid fa-user"></i></Link>
+                    <div className="ms-3">
+                        <Link className="btn  btn-sm btn-outline-success" to="/vendor/dash"><i className="fa-solid fa-user"></i></Link>
                     </div>
                 </div>
             </div>

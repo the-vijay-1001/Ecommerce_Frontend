@@ -31,7 +31,7 @@ function UserDash({ onSubmit }) {
         // validationSchema={validation}
         >
             <Form>
-                {/* <aside class="profile-card">
+                {/* <aside className="profile-card">
                     <header>
                         <img className="vendorProfile" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-uDQ1_sHh3M416jBY8v-t1ZEcYfJktaHrKUrkkhUFHVap0MSSMbrwOJH3-Lt4t7RUqHCnm-eKZ7o&usqp=CAU&ec=48600112" />
                         <p className="mt-4 ">
@@ -52,7 +52,7 @@ function UserDash({ onSubmit }) {
 
                     </header>
 
-                    <div class="profile-bio d-flex justify-content-end">
+                    <div className="profile-bio d-flex justify-content-end">
 
                         <button className="btn btn-sm btn-primary" type="submit">
                             {isEditable ? 'Save'

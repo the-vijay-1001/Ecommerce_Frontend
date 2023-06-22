@@ -2,10 +2,6 @@ import axios from "axios";
 
 import config from "../config";
 
-
-
-
-
 const APIrequest = async ({
     method,
     url,
@@ -79,14 +75,12 @@ const APIrequest = async ({
             axiosConfig.data = bodyPayload;
         }
 
-        console.log(axiosConfig)
+        // console.log(axiosConfig)
         const res = await axios(axiosConfig);
 
         return res;
 
     } catch (error) {
-
-        // console.log(error);
         return error;
     }
 

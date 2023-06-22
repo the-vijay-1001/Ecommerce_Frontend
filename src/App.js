@@ -4,8 +4,6 @@ import { BrowserRouter, Outlet, useRoutes } from 'react-router-dom';
 import { Routes } from "./route"
 import { Suspense } from 'react';
 
-
-
 function RouteLayout({ path }) {
   return useRoutes(path);
 }
