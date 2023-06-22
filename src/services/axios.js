@@ -19,11 +19,11 @@ const APIrequest = async ({
 
         const axiosConfig = {
             method: method || "GET",
-            baseURL: config.API_BASE_URL,
+            baseURL: "http://localhost:3001",
             headers: {
                 "content-type": "application/json",
                 "X-Frame-Options": "sameorigin",
-                hostname:config.APP_URL
+                
             },
         };
 
@@ -82,12 +82,12 @@ const APIrequest = async ({
         console.log(axiosConfig)
         const res = await axios(axiosConfig);
 
-        return res.data;
+        return res;
 
     } catch (error) {
 
-        console.log(error);
-
+        // console.log(error);
+        return error;
     }
 
 };

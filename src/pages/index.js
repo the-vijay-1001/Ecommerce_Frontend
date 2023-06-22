@@ -1,2 +1,3 @@
-export * from "./user";
-export * from "./Admin"
+export * from "./vendor";
+export * from "./Admin";
+// export * from "./User";

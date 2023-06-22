@@ -14,12 +14,22 @@ export const authSlice = createSlice({
                     userData:{...action.payload}
                 }
             )
-        }
+        },
+        updateUserDataAction: (state, action) => {
+            return (state = {
+              ...state,
+              userData: {
+                ...state.userData,
+                ...action.payload,
+              },
+            });
+          }
     }
 })
 
 export const {
-    loginAction
+    loginAction,
+    updateUserDataAction
 } = authSlice.actions;
 
 export const login = (data)=>async dispatch=>{
@@ -30,4 +40,13 @@ export const login = (data)=>async dispatch=>{
     }
 }
 
+export const updateUserData = (data) => async (dispatch) => {
+    try {
+      dispatch(updateUserDataAction(data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+export const selectUser = (state)=>state.auth.userData;
 export default authSlice.reducer;
