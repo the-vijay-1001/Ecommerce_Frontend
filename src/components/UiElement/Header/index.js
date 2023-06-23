@@ -16,7 +16,7 @@ function Navbar() {
                     <div className="navbar-nav mx-lg-auto">
                         <Link to="/" className="nav-item nav-link active">Home</Link>
                         <Link to="/product-list" className="nav-item nav-link active">Product</Link>
-                        <Link to="/" className="nav-item nav-link active">Features</Link>
+                        <Link to="/vendor/upload" className="nav-item nav-link active">Features</Link>
                         <Link to="/" className="nav-item nav-link active">Pricing</Link>
                     </div>
                     {dataOfVendor && <>

@@ -16,11 +16,12 @@ function UploadProduct({ onSubmit }) {
     const [price, setPrice] = useState();
     const [stock, setStock] = useState();
     const [discountPercentage, setSiscountPercentage] = useState();
-    const [imageUrl, setImageUrl] = useState();
+    const [imageIdArray,setImageIdArray] = useState([]);
 
     function edit(data) {
-        onSubmit({ ...data, profileImageURL: imageUrl });
-        setEditable(!isEditable);
+        onSubmit({ ...data,imageIdArray});
+        // setEditable(!isEditable);
+        
     }
     return <>
         <Navbar />
@@ -63,7 +64,7 @@ function UploadProduct({ onSubmit }) {
                                                         <h3 className="mb-5 text-primary">Upload Product Pictures</h3>
                                                         <div>
                                                             {/*  imageUrl={imageUrl} setImageUrl={setImageUrl} */}
-                                                            <UploadFiles imageUrl={imageUrl} setImageUrl={setImageUrl} />
+                                                            <UploadFiles imageIdArray={imageIdArray} setImageIdArray={setImageIdArray} />
                                                         </div>
                                                     </div>
 

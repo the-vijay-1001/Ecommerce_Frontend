@@ -1,83 +1,9 @@
-// import { PlusOutlined } from '@ant-design/icons';
-// import { Modal, Upload } from 'antd';
-// import { useState } from 'react';
-// import Common from '../../apiEndPoints/Common';
-// import { green } from '@mui/material/colors';
-// const getBase64 = (file) =>
-//   new Promise((resolve, reject) => {
-//     const reader = new FileReader();
-//     reader.readAsDataURL(file);
-//     reader.onload = () => resolve(reader.result);
-//     reader.onerror = (error) => reject(error);
-//   });
-// const App = ({ imageUrl, setImageUrl }) => {
-//   const [previewOpen, setPreviewOpen] = useState(false);
-//   const [previewImage, setPreviewImage] = useState('');
-//   const [previewTitle, setPreviewTitle] = useState('');
-//   const [fileList, setFileList] = useState([]);
-//   const handleCancel = () => setPreviewOpen(false);
 
-//   const handlePreview = async (file) => {
-//     if (!file.url && !file.preview) {
-//       file.preview = await getBase64(file.originFileObj);
-//     }
-//     console.log("vijay")
-    
-//     setPreviewImage(file.url || file.preview);
-//     setPreviewOpen(true);
-//     setPreviewTitle(file.name || file.url.substring(file.url.lastIndexOf('/') + 1));
-
-//   };
-
-//   const handleChange = ({ fileList: newFileList }) => {
-//     console.log(fileList[fileList.length-1]);
-//     console.log("12");
-//     setImageUrl(fileList[fileList.length-1]);
-//     return setFileList(newFileList);
-    
-//   }
-
-
-//   const uploadButton = (
-//     <div>
-//       <PlusOutlined />
-//       <div
-//         style={{
-//           marginTop: 8,
-//         }}
-//       >
-//         Upload
-//       </div>
-//     </div>
-//   );
-//   return (
-//     <>
-//       <Upload
-//         action={Common.media("image", "vendor")}
-//         listType="picture-circle"
-//         fileList={fileList}
-//         onPreview={handlePreview}
-//         onChange={handleChange}
-//       >
-//         {fileList.length >= 5 ? null : uploadButton}
-//       </Upload>
-//       <Modal open={previewOpen} title={previewTitle} footer={null} onCancel={handleCancel}>
-//         <img
-//           alt="example"
-//           style={{
-//             width: '100%',
-//           }}
-//           src={previewImage}
-//         />
-//       </Modal>
-//     </>
-//   );
-// };
-// export default App;
 import { PlusOutlined } from '@ant-design/icons';
 import { Modal, Upload } from 'antd';
 import { useState } from 'react';
 import Common from '../../apiEndPoints/Common';
+import { useEffect } from 'react';
 const getBase64 = (file) =>
   new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -85,13 +11,12 @@ const getBase64 = (file) =>
     reader.onload = () => resolve(reader.result);
     reader.onerror = (error) => reject(error);
   });
-const App = ({imageUrl,setImageUrl}) => {
+const App = ({ imageIdArray, setImageIdArray }) => {
   const [previewOpen, setPreviewOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState('');
   const [previewTitle, setPreviewTitle] = useState('');
   const [fileList, setFileList] = useState([]);
   const handleCancel = () => setPreviewOpen(false);
- 
   const handlePreview = async (file) => {
     if (!file.url && !file.preview) {
       file.preview = await getBase64(file.originFileObj);
@@ -100,10 +25,10 @@ const App = ({imageUrl,setImageUrl}) => {
     setPreviewOpen(true);
     setPreviewTitle(file.name || file.url.substring(file.url.lastIndexOf('/') + 1));
   };
- 
-  const handleChange = ({ fileList: newFileList }) =>{
+
+  const handleChange = ({ fileList: newFileList, file }) => {
     setFileList(newFileList);
-    setImageUrl(fileList[fileList.length-1]);
+    file?.response?.id && setImageIdArray([...imageIdArray,file.response?.id]);
   }
   const uploadButton = (
     <div>
@@ -120,13 +45,13 @@ const App = ({imageUrl,setImageUrl}) => {
   return (
     <>
       <Upload
-        action={Common.media("image","product")}
+        action={Common.media("image", "product")}
         listType="picture-circle"
         fileList={fileList}
         onPreview={handlePreview}
         onChange={handleChange}
       >
-        {fileList.length >= 8 ? null : uploadButton}
+        {fileList.length >= 5 ? null : uploadButton}
       </Upload>
       <Modal open={previewOpen} title={previewTitle} footer={null} onCancel={handleCancel}>
         <img

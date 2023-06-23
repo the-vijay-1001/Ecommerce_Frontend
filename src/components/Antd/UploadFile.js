@@ -35,8 +35,6 @@ const App = ({imageUrl,setImageUrl}) => {
       // Get this url from response in real world.
       getBase64(info.file.originFileObj, (url) => {
         setLoading(false);
-        console.log("99987865343");
-        console.log(info.file.response.baseUrl);
         setImageUrl(info.file.response.baseUrl);
       });
     }

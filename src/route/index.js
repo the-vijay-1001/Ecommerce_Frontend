@@ -4,7 +4,8 @@ import { MainLayout } from "../layouts";
 import {adminRoutes} from "./Admin"
 import { vendorRoutes } from "./vendor";
 import { Outlet } from "react-router";
-import { userRoutes } from "./User";
+import {userRoutes} from "./user"
+
 export const Routes = () => {
   const { t } = useTranslation();
   return [
@@ -14,7 +15,7 @@ export const Routes = () => {
     },
     {
       element: <MainLayout />,
-      // children: [...userRoutes(t)]
+      children: [...userRoutes(t)]
     },
     {
       element: <Outlet />,
