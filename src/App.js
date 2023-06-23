@@ -5,6 +5,7 @@ import { Routes } from "./route"
 import { Suspense } from 'react';
 
 function RouteLayout({ path }) {
+  console.log(path)
   return useRoutes(path);
 }
 

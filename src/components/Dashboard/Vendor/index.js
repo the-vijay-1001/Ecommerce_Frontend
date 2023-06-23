@@ -19,52 +19,14 @@ function UserDash({ onSubmit }) {
         setEditable(!isEditable);
         isEditable && onSubmit({...data,profileImageURL:imageUrl});
     }
-
-    useEffect(() => {
-        console.log(dataOfVendor.vendorData.data);
-    }, [])
+    
     return <>
         <Formik
             initialValues={{ email, name, contact,file:null }}
             enableReinitialize
             onSubmit={edit}
-        // validationSchema={validation}
         >
             <Form>
-                {/* <aside className="profile-card">
-                    <header>
-                        <img className="vendorProfile" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-uDQ1_sHh3M416jBY8v-t1ZEcYfJktaHrKUrkkhUFHVap0MSSMbrwOJH3-Lt4t7RUqHCnm-eKZ7o&usqp=CAU&ec=48600112" />
-                        <p className="mt-4 ">
-                            <Field name="name" className="text-center" onChange={(event)=>setName(event.target.value)} disabled={!isEditable} value={name} />
-                        </p>
-                        <p className="text-center vendorName mt-1">
-                            <Field name="email" className="text-center" disabled={!isEditable} value={email}  onChange={(event)=>setEmail(event.target.value)}/>
-
-                        </p>
-                        <p className="text-center mt-1">
-                            
-                            <Field name="text" className="text-center" disabled={!isEditable} value={contact} onChange={(event)=>setContact(event.target.value)}/>
-                        </p>
-                        <p className="text-center mt-1">
-                            <Field name="text" className="text-center" disabled value={dataOfVendor?.vendorData?.role} />
-                        </p>
-
-
-                    </header>
-
-                    <div className="profile-bio d-flex justify-content-end">
-
-                        <button className="btn btn-sm btn-primary" type="submit">
-                            {isEditable ? 'Save'
-                                : 'Edit'
-                            }
-
-                        </button>
-                    </div>
-
-
-                </aside> */}
-
 
                 <div className="page-content page-container" id="page-content">
 

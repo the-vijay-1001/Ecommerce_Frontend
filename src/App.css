@@ -1395,4 +1395,16 @@ body {
 .sik-dropdown .dropdown-item {
   cursor: pointer;
 }
-
+.upload-feild {
+  width: 97%;
+  margin-left: 3vh;
+  margin-bottom: 2vh;
+  border-radius: 0.8vh;
+}
+.upload-label{
+  font-weight: 600;
+}
+.form-uploader{
+  padding-left: 15vh;
+  padding-right: 15vh;
+}

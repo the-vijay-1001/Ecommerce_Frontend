@@ -27,6 +27,9 @@ const accesRoutes = {
     },
     USER_DASHBOARD:{
         path : `${baseRoutes.userBaseRoute}dashboard`
+    },
+    UPLOAD_PRODUCT:{
+        path:`${baseRoutes.vendorBaseRoute}/upload`
     }
 }
 

@@ -15,8 +15,8 @@ function VendorSignupForm({ onSubmit }) {
                                 <h1>Create an Account</h1>
                                 <p id="dum">Get started for free!</p>
                             </div>
-                            <div className="input">
-                                <i className="fa-solid fa-user"></i>
+                            <div class="input">
+                                <i class="fa-solid fa-user"></i>
                                 {/* <input type="text" placeholder="Username" /> */}
                                 <Field type="text" id="name" name="name" placeholder="Username" />
                             </div>

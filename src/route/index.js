@@ -14,7 +14,7 @@ export const Routes = () => {
     },
     {
       element: <MainLayout />,
-      children: [...userRoutes(t)]
+      // children: [...userRoutes(t)]
     },
     {
       element: <Outlet />,

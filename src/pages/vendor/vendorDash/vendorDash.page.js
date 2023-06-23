@@ -8,7 +8,10 @@ function UserDash() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const dataOfVendor = useSelector(state => state.vendor);
+  
   async function onSubmit(data) {
+    console.log("2211111");
+    console.log(data.profileImageURL);
     const bodyData = { id: dataOfVendor.vendorData.id, ...data };
     const res = await UserAuthService.vendorUpdate({bodyData});
     if (res) {
@@ -18,6 +21,7 @@ function UserDash() {
       navigate("/");
     }
   }
+  
   return <>
     <Navbar />
     <DashUser onSubmit={onSubmit} />
